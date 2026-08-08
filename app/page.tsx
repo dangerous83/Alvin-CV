@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SiteFooter, SiteHeader, SectionHeading, Pill } from "./components";
 import { SkillExplorer } from "./SkillExplorer";
+import { VideoShowcase } from "./VideoShowcase";
 import { experience } from "./data";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -27,10 +28,6 @@ export default function Home() {
           <p className="hero-lede">
             I&apos;m Alvin Jampazar — a Senior Graphic Designer, Marketing Manager, and AI Specialist with 12+ years shaping brands across the UAE.
           </p>
-          <div className="hero-actions">
-            <a className="button button-primary" href="#work">Explore expertise <span aria-hidden="true">↓</span></a>
-            <a className="text-link" href="https://www.alvinjampazar.com" target="_blank" rel="noreferrer">View full portfolio <span aria-hidden="true">↗</span></a>
-          </div>
           <div className="hero-stats" aria-label="Career statistics">
             <div><strong>12+</strong><span>Years in UAE</span></div>
             <div><strong>700+</strong><span>Projects delivered</span></div>
@@ -38,18 +35,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-art">
-          <div className="hero-portal-actions" aria-label="External portfolio destinations">
-            <a href="https://www.alvinjampazar.com" target="_blank" rel="noreferrer">
-              <span>Explore my</span>
-              <strong>Services</strong>
-              <i aria-hidden="true">01 ↗</i>
-            </a>
-            <a href="https://www.alcon-online.site/" target="_blank" rel="noreferrer">
-              <span>View selected</span>
-              <strong>Portfolio</strong>
-              <i aria-hidden="true">02 ↗</i>
-            </a>
-          </div>
+          <VideoShowcase />
           <img src={`${basePath}/og.png`} alt="Alvin Jampazar — Graphic Design and AI Systems" />
           <div className="hero-art-note">
             <span>Creative direction</span>
