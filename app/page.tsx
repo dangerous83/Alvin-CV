@@ -3,6 +3,8 @@ import { SiteFooter, SiteHeader, SectionHeading, Pill } from "./components";
 import { SkillExplorer } from "./SkillExplorer";
 import { experience } from "./data";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const clientNames = [
   "ADNOC",
   "TADWEER",
@@ -36,7 +38,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-art">
-          <img src="/og.png" alt="Alvin Jampazar — Graphic Design and AI Systems" />
+          <img src={`${basePath}/og.png`} alt="Alvin Jampazar — Graphic Design and AI Systems" />
           <div className="hero-art-note">
             <span>Creative direction</span>
             <span>AI systems</span>
