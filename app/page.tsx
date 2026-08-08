@@ -61,6 +61,14 @@ export default function Home() {
           <p className="hero-lede">
             I&apos;m Alvin Jampazar — a Senior Graphic Designer, Marketing Manager, and AI Specialist with 12+ years shaping brands across the UAE.
           </p>
+          <div className="hero-actions" aria-label="Explore Alvin Jampazar's work">
+            <a href="https://www.alvinjampazar.com" target="_blank" rel="noreferrer">
+              Expertise <span aria-hidden="true">↗</span>
+            </a>
+            <a href="https://www.alcon-online.site" target="_blank" rel="noreferrer">
+              Portfolio <span aria-hidden="true">↗</span>
+            </a>
+          </div>
           <div className="hero-stats" aria-label="Career statistics">
             <div><strong>12+</strong><span>Years in UAE</span></div>
             <div><strong>700+</strong><span>Projects delivered</span></div>

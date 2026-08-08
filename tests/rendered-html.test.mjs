@@ -29,6 +29,9 @@ test("server-renders the finished professional CV home page", async () => {
   assert.match(html, /alcon-online\.site/);
   assert.match(html, /Watch my AI showreel/);
   assert.match(html, /showreel-dialog/);
+  assert.match(html, /class="hero-actions"/);
+  assert.match(html, /href="https:\/\/www\.alvinjampazar\.com"[^>]*>\s*Expertise/);
+  assert.match(html, /href="https:\/\/www\.alcon-online\.site"[^>]*>\s*Portfolio/);
   assert.match(html, /wa\.me\/971522235776\?text=/);
   assert.match(html, /Chat with Alvin on WhatsApp/);
   assert.match(html, /brand-emblem/);

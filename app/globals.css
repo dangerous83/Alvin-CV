@@ -102,6 +102,7 @@ img { display: block; max-width: 100%; }
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: translateY(-24px);
 }
 .hero-copy > * { animation: heroRise .72s cubic-bezier(.2,.7,.2,1) both; }
 .hero-copy > :nth-child(2) { animation-delay: .08s; }
@@ -131,6 +132,11 @@ img { display: block; max-width: 100%; }
   text-transform: uppercase;
 }
 .hero-lede { max-width: 680px; margin: 0; color: var(--paper-soft); font-size: clamp(1rem, 1.3vw, 1.22rem); line-height: 1.65; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.hero-actions a { min-width: 158px; min-height: 48px; display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 18px; border: 1px solid rgba(166,49,69,.68); background: linear-gradient(115deg, var(--maroon), var(--maroon-dark)); color: var(--paper); font-family: var(--mono); font-size: .68rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; box-shadow: inset 0 0 0 1px rgba(255,255,255,.035); transition: transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease; }
+.hero-actions a:last-child { background: rgba(12,11,11,.72); }
+.hero-actions a span { color: #d85b70; font-size: .88rem; }
+.hero-actions a:hover, .hero-actions a:focus-visible { transform: translateY(-3px); border-color: rgba(216,91,112,.9); background: linear-gradient(115deg, #8b263a, var(--maroon-dark)); box-shadow: 0 13px 30px rgba(60,11,22,.36); }
 .button {
   min-height: 50px;
   display: inline-flex;
@@ -381,10 +387,12 @@ img { display: block; max-width: 100%; }
   .main-nav { display: none; }
   .header-cta { font-size: .62rem; }
   .hero { min-height: auto; }
-  .hero-copy { min-height: 650px; padding: 70px 22px 36px; }
+  .hero-copy { min-height: 650px; padding: 70px 22px 36px; transform: translateY(-10px); }
   .availability { flex-wrap: wrap; line-height: 1.55; }
   .hero h1 { font-size: clamp(2.65rem, 12.6vw, 3.65rem); }
   .hero-stats { padding-top: 48px; }
+  .hero-actions { margin-top: 20px; }
+  .hero-actions a { min-width: calc(50% - 5px); }
   .hero-stats span { font-size: .58rem; }
   .hero-art { min-height: 410px; }
   .hero-art > img { padding: 150px 16px 28px; }
