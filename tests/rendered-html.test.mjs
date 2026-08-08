@@ -32,6 +32,12 @@ test("server-renders the finished professional CV home page", async () => {
   assert.match(html, /wa\.me\/971522235776\?text=/);
   assert.match(html, /Chat with Alvin on WhatsApp/);
   assert.match(html, /brand-emblem/);
+  assert.equal((html.match(/class="tool-card"/g) ?? []).length, 30);
+  assert.match(html, /Adobe Photoshop/);
+  assert.match(html, /Adobe Media Encoder/);
+  assert.match(html, /Claude AI/);
+  assert.match(html, /Dreamina AI/);
+  assert.match(html, /VS Code, Claude Code &amp; Codex/);
   assert.match(html, /og:image/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
   assert.doesNotMatch(html, /\+971 56 164 3886/);

@@ -256,10 +256,16 @@ img { display: block; max-width: 100%; }
 .timeline-item div > strong { color: #bd5366; font-size: .75rem; }
 .timeline-item > p { max-width: 670px; margin: 0; color: var(--muted); font-size: .91rem; line-height: 1.7; }
 
-.tools-section { background: #0c0b0b; }
-.tool-cloud { display: flex; flex-wrap: wrap; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-.tool-cloud span { flex: 1 1 170px; min-height: 82px; display: grid; place-items: center; padding: 16px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--paper-soft); font-family: var(--display); font-size: 1.02rem; font-weight: 800; letter-spacing: .02em; text-align: center; text-transform: uppercase; }
-.tool-cloud span:hover { background: var(--maroon); color: white; }
+.tools-section { padding-top: clamp(62px, 7vw, 94px); padding-bottom: clamp(66px, 7vw, 96px); background: radial-gradient(circle at 18% 10%, rgba(112,28,43,.12), transparent 34%), #0c0b0b; }
+.tools-section .section-heading { margin-bottom: clamp(32px, 4vw, 52px); }
+.tools-section .section-heading h2 { max-width: 760px; font-size: clamp(2.35rem, 4vw, 4.35rem); }
+.tools-section .section-heading > div > p { max-width: 760px; margin-top: 18px; font-size: .9rem; line-height: 1.6; }
+.tool-cloud { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 10px; }
+.tool-card { min-width: 0; min-height: 104px; display: grid; place-items: center; align-content: center; gap: 11px; padding: 15px 10px; border: 1px solid rgba(243,238,231,.1); border-radius: 12px; background: linear-gradient(145deg, rgba(31,24,21,.7), rgba(13,13,13,.94) 60%); text-align: center; transition: transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease; }
+.tool-card:hover { transform: translateY(-4px); border-color: rgba(203,75,29,.62); background: linear-gradient(145deg, rgba(87,31,18,.34), rgba(16,13,13,.98) 62%); box-shadow: 0 15px 34px rgba(0,0,0,.28); }
+.tool-mark { min-width: 28px; height: 27px; display: grid; place-items: center; color: #ff6414; font-family: var(--mono); font-size: .82rem; font-weight: 900; line-height: 1; letter-spacing: -.06em; }
+.tool-mark::after { width: 22px; height: 1px; margin-top: 5px; background: currentColor; opacity: .55; content: ""; }
+.tool-card strong { max-width: 138px; color: var(--paper-soft); font-size: .73rem; line-height: 1.28; text-wrap: balance; }
 
 .contact-section { display: grid; grid-template-columns: 1.12fr .88fr; background: var(--maroon-dark); }
 .contact-copy { min-height: 650px; padding: clamp(70px, 9vw, 130px) 6vw; display: flex; flex-direction: column; justify-content: center; }
@@ -299,7 +305,7 @@ img { display: block; max-width: 100%; }
 @keyframes whatsappEcho { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,.38); } 65%,100% { box-shadow: 0 0 0 12px rgba(37,211,102,0); } }
 
 @supports (animation-timeline: view()) {
-  .section-heading, .profile-grid, .work-card, .impact-card, .timeline-item, .tool-cloud span { animation: revealSection both linear; animation-timeline: view(); animation-range: entry 5% cover 24%; }
+  .section-heading, .profile-grid, .work-card, .impact-card, .timeline-item, .tool-card { animation: revealSection both linear; animation-timeline: view(); animation-range: entry 5% cover 24%; }
   @keyframes revealSection { from { opacity: 0; transform: translateY(34px); } to { opacity: 1; transform: translateY(0); } }
 }
 
@@ -366,6 +372,7 @@ img { display: block; max-width: 100%; }
   .detail-hero-copy { min-height: 630px; }
   .detail-hero-image { border-left: 0; border-top: 1px solid var(--line); }
   .process-section { grid-template-columns: 1fr; }
+  .tool-cloud { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }
 
 @media (max-width: 760px) {
@@ -395,6 +402,9 @@ img { display: block; max-width: 100%; }
   .section-shell { padding: 78px 22px; }
   .section-heading { grid-template-columns: 1fr; gap: 24px; margin-bottom: 50px; }
   .section-heading h2, .contact-section h2, .footer-cta h2, .detail-cta h2, .process-title h2 { font-size: clamp(2.5rem, 12.5vw, 4.2rem); }
+  .tools-section .section-heading h2 { font-size: clamp(2.25rem, 10vw, 3.35rem); }
+  .tool-cloud { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .tool-card { min-height: 98px; }
   .profile-grid { grid-template-columns: 1fr; }
   .profile-portrait { width: calc(100% - 12px); }
   .profile-portrait p { right: -12px; }

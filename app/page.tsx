@@ -16,6 +16,39 @@ const clientNames = [
   "ENVIRONMENT AGENCY",
 ];
 
+const toolkit = [
+  { name: "Adobe Photoshop", icon: "Ps" },
+  { name: "Adobe Illustrator", icon: "Ai" },
+  { name: "Adobe After Effects", icon: "Ae" },
+  { name: "Adobe Premiere Pro", icon: "Pr" },
+  { name: "Adobe InDesign", icon: "Id" },
+  { name: "Adobe Lightroom", icon: "Lr" },
+  { name: "Adobe Audition", icon: "Au" },
+  { name: "Adobe Media Encoder", icon: "Me" },
+  { name: "Adobe Acrobat", icon: "Ac" },
+  { name: "Adobe Substance 3D", icon: "3D" },
+  { name: "Adobe Firefly", icon: "Fy" },
+  { name: "Cinema 4D", icon: "C4" },
+  { name: "Lumion", icon: "Lu" },
+  { name: "Figma", icon: "Fi" },
+  { name: "Webflow", icon: "Wf" },
+  { name: "Visual Studio", icon: "VS" },
+  { name: "ChatGPT", icon: "GPT" },
+  { name: "Claude AI", icon: "Cl" },
+  { name: "Midjourney", icon: "Mj" },
+  { name: "Leonardo AI", icon: "Le" },
+  { name: "Kling AI", icon: "Kl" },
+  { name: "Dreamina AI", icon: "Dr" },
+  { name: "Runway ML", icon: "Rn" },
+  { name: "Sora", icon: "So" },
+  { name: "Magnific AI", icon: "Mg" },
+  { name: "Envato Elements AI", icon: "Ev" },
+  { name: "Freepik AI", icon: "Fr" },
+  { name: "Lovable AI", icon: "Lv" },
+  { name: "AI Platforms & Website Development", icon: "AI" },
+  { name: "VS Code, Claude Code & Codex", icon: "</>" },
+];
+
 export default function Home() {
   return (
     <main>
@@ -128,12 +161,18 @@ export default function Home() {
       </section>
 
       <section className="tools-section section-shell">
-        <SectionHeading kicker="05 / Toolkit" title="Craft meets new capability." />
+        <SectionHeading
+          kicker="05 / Toolkit"
+          title="Design, development & AI toolkit."
+          copy="A production-ready stack for brand design, motion, film, 3D, interface work, websites, generative media, and AI-assisted development."
+        />
         <div className="tool-cloud" aria-label="Creative and AI tools">
-          {[
-            "Photoshop", "Illustrator", "After Effects", "Premiere Pro", "InDesign", "Lightroom",
-            "Cinema 4D", "Lumion", "Figma", "Webflow", "ChatGPT", "Midjourney", "Runway", "Kling AI",
-          ].map((tool) => <span key={tool}>{tool}</span>)}
+          {toolkit.map((tool) => (
+            <div className="tool-card" key={tool.name}>
+              <span className="tool-mark" aria-hidden="true">{tool.icon}</span>
+              <strong>{tool.name}</strong>
+            </div>
+          ))}
         </div>
       </section>
 
