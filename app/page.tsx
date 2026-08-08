@@ -60,7 +60,7 @@ export default function Home() {
         />
         <div className="profile-grid">
           <div className="profile-portrait">
-            <img src="https://www.alvinjampazar.com/assets/alvin-profile-BqZ_-asG.jpg" alt="Alvin Jampazar in Dubai" />
+            <img src={`${basePath}/alvin-profile.jpg`} alt="Professional portrait of Alvin Jampazar" />
             <p>Based in Dubai, UAE<br />Working worldwide</p>
           </div>
           <div className="profile-copy">
