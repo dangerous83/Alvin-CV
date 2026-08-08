@@ -32,6 +32,8 @@ jobs:
 
       - name: Build static website
         run: npm run build:pages
+        env:
+          GITHUB_PAGES_CUSTOM_DOMAIN: "true"
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
