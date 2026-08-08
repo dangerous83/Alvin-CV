@@ -26,6 +26,11 @@ test("server-renders the finished professional CV home page", async () => {
   assert.match(html, /alvinjampazar1983@gmail\.com/);
   assert.match(html, /\+971 52 223 5776/);
   assert.match(html, /alcon-online\.site/);
+  assert.match(html, />Services</);
+  assert.match(html, />Portfolio</);
+  assert.match(html, /wa\.me\/971522235776\?text=/);
+  assert.match(html, /Chat with Alvin on WhatsApp/);
+  assert.match(html, /brand-emblem/);
   assert.match(html, /og:image/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
   assert.doesNotMatch(html, /\+971 56 164 3886/);

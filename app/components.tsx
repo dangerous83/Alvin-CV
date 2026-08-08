@@ -6,8 +6,10 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function BrandMark() {
   return (
-    <span className="brand-mark" aria-hidden="true">
-      AJ
+    <span className="brand-mark brand-emblem" aria-hidden="true">
+      <span className="emblem-a">A</span>
+      <span className="emblem-j">J</span>
+      <i />
     </span>
   );
 }
@@ -77,11 +79,22 @@ export function Pill({ children }: { children: ReactNode }) {
 
 export function SiteFooter() {
   return (
+    <>
+    <a
+      className="whatsapp-widget"
+      href="https://wa.me/971522235776?text=Hello%20Alvin%2C%20I%27d%20like%20to%20discuss%20a%20creative%20project."
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Chat with Alvin on WhatsApp"
+    >
+      <span aria-hidden="true">WA</span>
+      <strong>Let&apos;s talk</strong>
+    </a>
     <footer className="site-footer">
       <div className="footer-cta">
         <p className="kicker">The complete portfolio</p>
         <h2>Need the detailed CV?</h2>
-        <p>Download the original 18-page PDF with expanded capabilities, selected work, and client experience.</p>
+        <p>Download the premium editorial CV with career highlights, capabilities, selected work, and direct portfolio links.</p>
         <a className="button button-light" href={`${basePath}/Alvin_Jampazar_Web_CV.pdf`} download>
           Download my CV <span aria-hidden="true">↓</span>
         </a>
@@ -99,5 +112,6 @@ export function SiteFooter() {
         <p>Dubai, UAE · © 2026 Alvin Jampazar</p>
       </div>
     </footer>
+    </>
   );
 }

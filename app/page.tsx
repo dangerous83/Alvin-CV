@@ -38,6 +38,18 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-art">
+          <div className="hero-portal-actions" aria-label="External portfolio destinations">
+            <a href="https://www.alvinjampazar.com" target="_blank" rel="noreferrer">
+              <span>Explore my</span>
+              <strong>Services</strong>
+              <i aria-hidden="true">01 ↗</i>
+            </a>
+            <a href="https://www.alcon-online.site/" target="_blank" rel="noreferrer">
+              <span>View selected</span>
+              <strong>Portfolio</strong>
+              <i aria-hidden="true">02 ↗</i>
+            </a>
+          </div>
           <img src={`${basePath}/og.png`} alt="Alvin Jampazar — Graphic Design and AI Systems" />
           <div className="hero-art-note">
             <span>Creative direction</span>
