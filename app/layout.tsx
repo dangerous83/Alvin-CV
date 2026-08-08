@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import "./globals.css";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "www.alvinjampazar.com";
-  const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.includes("localhost") ? "http" : "https");
-  const base = new URL(`${protocol}://${host}`);
-  const socialImage = new URL("/og.png", base).toString();
+export function generateMetadata(): Metadata {
+  const base = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.alvinjampazar.com/");
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const socialImage = new URL(`${basePath}/og.png`, base.origin).toString();
 
   return {
     metadataBase: base,
@@ -17,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description: "Professional web CV for Alvin Jampazar — a Dubai-based Senior Graphic Designer, Marketing Manager, and AI Specialist with 12+ years of UAE experience.",
     keywords: ["Alvin Jampazar", "graphic designer Dubai", "AI specialist", "motion designer", "web designer", "brand identity"],
-    icons: { icon: "/og.png", shortcut: "/og.png" },
+    icons: { icon: `${basePath}/og.png`, shortcut: `${basePath}/og.png` },
     openGraph: {
       type: "website",
       title: "Alvin Jampazar — Graphic Design × AI Systems",
