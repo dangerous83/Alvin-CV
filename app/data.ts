@@ -19,6 +19,7 @@ export type WorkItem = {
 };
 
 const asset = (path: string) => `https://www.alvinjampazar.com${path}`;
+const localAsset = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
 
 export const workItems: WorkItem[] = [
   {
@@ -54,7 +55,7 @@ export const workItems: WorkItem[] = [
     heroImage: asset("/assets/ai-hero-BK_YwoeZ.jpg"),
     imageAlt: "AI creative production and marketing systems",
     gallery: [
-      { src: "/og.png", alt: "Alvin Jampazar graphic design and AI systems" },
+      { src: localAsset("/og.png"), alt: "Alvin Jampazar graphic design and AI systems" },
       { src: asset("/assets/thumb-lambo-kgW4j-sH.png"), alt: "AI cinematic video project" },
     ],
     capabilities: ["AI campaign strategy", "Content personalization", "Creative workflow automation", "Performance analysis & optimization"],
@@ -133,10 +134,10 @@ export const workItems: WorkItem[] = [
     summary: "Responsive, SEO-aware websites and landing pages engineered for clarity, trust, speed, and conversion.",
     intro: "I combine UX thinking, visual design, and practical front-end implementation to ship websites that work in the real world. From information architecture and responsive layouts to forms, light custom code, SEO, and launch support, I stay close to the full product.",
     sourceUrl: "https://www.alvinjampazar.com/client-projects",
-    heroImage: asset("/assets/hero-uiux-DEo5cuXO.jpg"),
-    imageAlt: "Layered responsive web interface designs",
+    heroImage: localAsset("/skill-web-developer.png"),
+    imageAlt: "Black and maroon web development system with responsive interface architecture",
     gallery: [
-      { src: "/og.png", alt: "Alvin Jampazar digital design system" },
+      { src: localAsset("/skill-web-developer.png"), alt: "Web development workspace and modular responsive layouts" },
       { src: "https://www.alcon-online.site/images/feature-brain.webp", alt: "Alcon AI-accelerated creative platform" },
     ],
     capabilities: ["Responsive websites", "Conversion landing pages", "Webflow implementation", "SEO & performance refinement"],
@@ -156,7 +157,7 @@ export const workItems: WorkItem[] = [
     heroImage: asset("/assets/hero-uiux-DEo5cuXO.jpg"),
     imageAlt: "Cinematic layered UI and UX screens",
     gallery: [
-      { src: "/og.png", alt: "Editorial digital systems artwork" },
+      { src: localAsset("/og.png"), alt: "Editorial digital systems artwork" },
       { src: asset("/assets/ai-hero-BK_YwoeZ.jpg"), alt: "AI-enabled digital experience" },
     ],
     capabilities: ["User research & strategy", "Wireframes & prototypes", "Design systems", "Responsive & interaction design"],
@@ -173,10 +174,10 @@ export const workItems: WorkItem[] = [
     summary: "Professional wedding, portrait, food, product, and lifestyle photography with meticulous post-production.",
     intro: "My photography is grounded in storytelling, light, and composition. I plan each shoot around the brand or moment, then deliver carefully selected, retouched, and color-graded imagery ready for web, social, campaigns, and print.",
     sourceUrl: "https://www.alvinjampazar.com/portfolio?category=photography",
-    heroImage: asset("/assets/wedding-1-GrHZkBd9.jpg"),
-    imageAlt: "Bride with bouquet photographed at golden hour",
+    heroImage: localAsset("/skill-photography.png"),
+    imageAlt: "Professional camera and editorial photography still life in black and maroon",
     gallery: [
-      { src: asset("/assets/wedding-2-BmeMGf_l.jpg"), alt: "Elegant bridal portrait" },
+      { src: localAsset("/skill-photography.png"), alt: "Editorial photography equipment and curated contact sheets" },
       { src: asset("/assets/wedding-6-CmUUAgJX.jpg"), alt: "Cinematic wedding photography" },
       { src: "https://cdn.prod.website-files.com/65c8be800b7b07d9ce6ff6e1/65fe00aeeba566605419d70a_D-3.jpg", alt: "Fine dining food photography" },
     ],
@@ -256,10 +257,10 @@ export const workItems: WorkItem[] = [
     summary: "AI-powered tools, SaaS products, and community platforms designed, developed, and deployed end-to-end.",
     intro: "I treat platforms as complete systems: audience need, product structure, UI language, build workflow, launch, and continued refinement. My portfolio spans creative AI, design systems, business operations, agriculture, community, and Web3 products.",
     sourceUrl: "https://www.alvinjampazar.com/digital-platforms",
-    heroImage: "/og.png",
-    imageAlt: "Alvin Jampazar digital platform design system",
+    heroImage: localAsset("/skill-platforms.png"),
+    imageAlt: "Connected modular digital platform ecosystem in black and maroon",
     gallery: [
-      { src: asset("/assets/hero-uiux-DEo5cuXO.jpg"), alt: "Layered platform interface" },
+      { src: localAsset("/skill-platforms.png"), alt: "Interconnected product modules and platform architecture" },
       { src: asset("/assets/ai-hero-BK_YwoeZ.jpg"), alt: "AI platform and automation" },
     ],
     capabilities: ["Product strategy & UX", "AI-assisted platform development", "SaaS & community products", "Launch and iteration"],
@@ -297,10 +298,10 @@ export const workItems: WorkItem[] = [
     summary: "Cinematic image-to-video production, AI storyboards, and scalable content systems with professional creative control.",
     intro: "I turn a visual concept into a structured storyboard, then direct generative AI through scenes, camera moves, transitions, and motion before adding professional post-production. The workflow makes ambitious video more agile without sacrificing narrative craft.",
     sourceUrl: "https://www.alvinjampazar.com/services/ai",
-    heroImage: asset("/assets/ai-hero-BK_YwoeZ.jpg"),
-    imageAlt: "AI video generation and cinematic storyboards",
+    heroImage: localAsset("/skill-ai-video.png"),
+    imageAlt: "Cinematic AI video storyboards, camera paths, and editing timeline",
     gallery: [
-      { src: asset("/assets/thumb-lambo-kgW4j-sH.png"), alt: "AI cinematic reel" },
+      { src: localAsset("/skill-ai-video.png"), alt: "AI storyboard frames transforming into cinematic motion" },
       { src: asset("/assets/thumb-uae-flag-day-CphVmAGF.jpg"), alt: "UAE Flag Day AI video" },
       { src: asset("/assets/ai-video-thumb-2-DCcITVuV.jpg"), alt: "AI cinematic storyboard video" },
     ],

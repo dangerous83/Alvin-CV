@@ -148,7 +148,7 @@ export default function Home() {
         </div>
         <div className="contact-details">
           <a href="mailto:alvinjampazar1983@gmail.com"><span>Email</span><strong>alvinjampazar1983@gmail.com</strong></a>
-          <a href="https://wa.me/971561643886" target="_blank" rel="noreferrer"><span>WhatsApp</span><strong>+971 56 164 3886</strong></a>
+          <a href="https://wa.me/971522235776" target="_blank" rel="noreferrer"><span>WhatsApp</span><strong>+971 52 223 5776</strong></a>
           <div><span>Location</span><strong>Dubai, UAE</strong></div>
           <a href="https://www.linkedin.com/in/alvin-jampazar-306064202/" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>Professional profile ↗</strong></a>
           <a href="https://www.alvinjampazar.com" target="_blank" rel="noreferrer"><span>Main portfolio</span><strong>alvinjampazar.com ↗</strong></a>

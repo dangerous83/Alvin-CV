@@ -27,7 +27,7 @@ export function SiteHeader() {
         <Link href="/#experience">Experience</Link>
         <Link href="/#contact">Contact</Link>
       </nav>
-      <a className="header-cta" href={`${basePath}/Alvin_Jampazar_CV.pdf`} download>
+      <a className="header-cta" href={`${basePath}/Alvin_Jampazar_Web_CV.pdf`} download>
         Download CV <span aria-hidden="true">↓</span>
       </a>
     </header>
@@ -82,7 +82,7 @@ export function SiteFooter() {
         <p className="kicker">The complete portfolio</p>
         <h2>Need the detailed CV?</h2>
         <p>Download the original 18-page PDF with expanded capabilities, selected work, and client experience.</p>
-        <a className="button button-light" href={`${basePath}/Alvin_Jampazar_CV.pdf`} download>
+        <a className="button button-light" href={`${basePath}/Alvin_Jampazar_Web_CV.pdf`} download>
           Download my CV <span aria-hidden="true">↓</span>
         </a>
       </div>

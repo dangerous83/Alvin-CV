@@ -22,11 +22,13 @@ test("server-renders the finished professional CV home page", async () => {
   assert.match(html, /<title>Alvin Jampazar/);
   assert.match(html, /Design systems, brand worlds &amp; AI-powered growth/);
   assert.match(html, /Fourteen disciplines/);
-  assert.match(html, /Alvin_Jampazar_CV\.pdf/);
+  assert.match(html, /Alvin_Jampazar_Web_CV\.pdf/);
   assert.match(html, /alvinjampazar1983@gmail\.com/);
+  assert.match(html, /\+971 52 223 5776/);
   assert.match(html, /alcon-online\.site/);
   assert.match(html, /og:image/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
+  assert.doesNotMatch(html, /\+971 56 164 3886/);
 });
 
 test("renders every requested expertise page", async () => {
@@ -43,5 +45,8 @@ test("renders every requested expertise page", async () => {
     assert.match(html, /View original portfolio/);
     assert.match(html, /The process/);
     assert.match(html, /Download my CV/);
+    if (["web-developer", "photographer", "platforms", "ai-video"].includes(slug)) {
+      assert.match(html, new RegExp(`skill-${slug === "photographer" ? "photography" : slug}\\.png`));
+    }
   }
 });
