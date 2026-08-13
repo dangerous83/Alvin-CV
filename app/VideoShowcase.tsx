@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 
-const VIDEO_PREVIEW = "https://drive.google.com/file/d/18GJ3DqkmJ74fqnftsBVXBSbLeZHDVrla/preview";
+const VIDEO_PREVIEW = "https://drive.google.com/file/d/1KivjsmvQD_rARb3d_MiVHXIkPxx05aT2/preview";
 
 export function VideoShowcase() {
   const dialogRef = useRef<HTMLDialogElement>(null);
