@@ -46,7 +46,7 @@ test("server-renders the finished professional CV home page", async () => {
   assert.doesNotMatch(html, /\+971 56 164 3886/);
 
   const showreelSource = await readFile(new URL("../app/VideoShowcase.tsx", import.meta.url), "utf8");
-  assert.match(showreelSource, /18GJ3DqkmJ74fqnftsBVXBSbLeZHDVrla\/preview/);
+  assert.match(showreelSource, /1KivjsmvQD_rARb3d_MiVHXIkPxx05aT2\/preview/);
 });
 
 test("renders every requested expertise page", async () => {
